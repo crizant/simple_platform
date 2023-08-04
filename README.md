@@ -4,9 +4,9 @@ Provides two classes to determine the application platform and the device platfo
 
 ## Motivation
 
-Since Flutter's first release, developers have been using the `Platform` class from `dart:io` to target features for different platforms. However, as Flutter started supporting the web platform, people often mix up the concept between a "device platform" and an "app platform".
+Since Flutter's first release, developers have been using the `Platform` class from `dart:io` to target features for different platforms. However, as Flutter started supporting the web platform, people often mix up the concept between the "device platform" and the "app platform".
 
-### AppPlatform
+### App Platform
 
 The app platform is the platform running the app, i.e. `web` for browsers, and the device's platform otherwise.
 
@@ -18,7 +18,7 @@ if (!AppPlatform.isWeb) {
 }
 ```
 
-### Device platform
+### Device Platform
 
 The device platform is the actual platform of the device.
 
@@ -34,6 +34,7 @@ if (DevicePlatform.isWindows || DevicePlatform.isMacOS || DevicePlatform.isLinux
 
 - Compiles on all platforms
 - Zero external dependencies apart from the Flutter SDK.
+- Test friendly
 
 ## Usage
 
@@ -62,4 +63,14 @@ DevicePlatform.isIOS
 DevicePlatform.isLinux
 DevicePlatform.isMacOS
 DevicePlatform.isWindows
+```
+
+## Testing
+
+If you want to override the platform in a test environment, set a value to `debugDefaultTargetPlatformOverride`.
+Note you can override "is web" by setting a value to `AppPlatform.isWebOverride`.
+
+```
+debugDefaultTargetPlatformOverride = TargetPlatform.android;
+AppPlatform.isWebOverride = true;
 ```
