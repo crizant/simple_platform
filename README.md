@@ -10,7 +10,7 @@ Since Flutter's first release, developers have been using the `Platform` class f
 
 The app platform is the platform running the app, i.e. `web` for browsers, and the device's platform otherwise.
 
-For example, you may want to add a version checking feature for your cross-platform app, but not for web as it's always the latest version (if you manage your CDN correctly).
+For example, you may want to add a version checking feature for your cross-platform app, but not for the web as it's always the latest version (if you manage your CDN correctly).
 
 ```
 if (!AppPlatform.isWeb) {
@@ -22,7 +22,7 @@ if (!AppPlatform.isWeb) {
 
 The device platform is the actual platform of the device.
 
-For example, you're developing a chat app for Android, iOS, and web. You may want to add an emoji picker for desktop users since the native emoji picker is less convenient on desktop platforms. But if users access the web from an Android or iOS device, they should not see the emoji picker.
+For example, you're developing a chat app for Android, iOS, and the web. You may want to add an emoji picker for desktop users since the native emoji picker is less convenient on desktop platforms. But if users access the web from an Android or iOS device, they should not see the emoji picker.
 
 ```
 if (DevicePlatform.isWindows || DevicePlatform.isMacOS || DevicePlatform.isLinux) {
@@ -32,7 +32,7 @@ if (DevicePlatform.isWindows || DevicePlatform.isMacOS || DevicePlatform.isLinux
 
 ## Features
 
-- Compiles on all platforms
+- Compiles and runs on all platforms
 - Zero external dependencies apart from the Flutter SDK.
 - Test friendly
 
@@ -48,7 +48,7 @@ AppPlatform.currentPlatform
 // get the device platform
 DevicePlatform.currentPlatform
 
-// handy methods
+// handy getter methods
 AppPlatform.isAndroid
 AppPlatform.isFuchsia
 AppPlatform.isIOS
