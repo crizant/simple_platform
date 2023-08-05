@@ -48,6 +48,8 @@ class AppPlatform {
 
 /// the operating system of current device
 class DevicePlatform {
+  DevicePlatform._();
+
   /// the current device is running Android
   static bool get isAndroid => currentPlatform == DevicePlatformType.android;
 
