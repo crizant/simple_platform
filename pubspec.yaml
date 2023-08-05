@@ -1,6 +1,6 @@
 name: simple_platform
 description: Provides two classes to determine the application platform and the device platform.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/crizant/simple_platform
 
 environment:
